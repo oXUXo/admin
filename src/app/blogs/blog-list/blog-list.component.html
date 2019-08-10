@@ -1,1 +1,6 @@
-<p>blog-list works!</p>
+<mat-list>
+    <mat-list-item *ngFor="let post of posts">
+        <span>{{post.title}}</span>
+        <span>{{post.createdAt | date}}</span>
+    </mat-list-item>
+</mat-list>

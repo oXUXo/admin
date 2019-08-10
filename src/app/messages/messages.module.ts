@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 import { MessagesRoutingModule } from './messages-routing.module';
 import { MessageListComponent } from './message-list/message-list.component';
+import { MessageContentDialogComponent } from './message-content-dialog/message-content-dialog.component';
+
 
 
 @NgModule({
-  declarations: [MessageListComponent],
+  declarations: [MessageListComponent, MessageContentDialogComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     MessagesRoutingModule
-  ]
+  ],
+  entryComponents: [MessageContentDialogComponent]
 })
 export class MessagesModule { }

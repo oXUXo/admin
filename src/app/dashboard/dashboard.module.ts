@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { ContainerComponent } from './container/container.component';
+
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [StatisticsComponent, ContainerComponent],
   imports: [
-    CommonModule
+    SharedModule
   ]
 })
 export class DashboardModule { }

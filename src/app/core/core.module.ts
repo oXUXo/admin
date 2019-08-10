@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { SideNavComponent } from './side-nav/side-nav.component';
+
 
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, SideNavComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     MatToolbarModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    SideNavComponent
   ]
 })
 export class CoreModule { }

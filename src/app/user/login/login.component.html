@@ -1,12 +1,15 @@
-<div>
-    <h1>Sign In</h1>
-    <form action="">
-        <mat-form-field>
-            <input matInput placeholder="Email">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Password">
-        </mat-form-field>
-        <button mat-raised-button color="primary">Sign In</button>
-    </form>
+<div class="container">
+    <mat-card>
+        <h1>Vsvparts Site Admin</h1>
+        <form [formGroup]="loginForm"(ngSubmit)="login()" class="login-form">
+            <mat-form-field>
+                <input matInput placeholder="Email" type="email" formControlName="email" required>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Password" type="password" formControlName="password" required>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit">Sign In</button>
+        </form>
+        Have no account?<a routerLink="/register"> register</a>
+    </mat-card>
 </div>

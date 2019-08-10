@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,9 @@ import { UserModule } from './user/user.module';
 import { ProductsModule } from './products/products.module';
 import { BlogsModule } from './blogs/blogs.module';
 import { MessagesModule } from './messages/messages.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { DashboardModule } from './dashboard/dashboard.module';
+
 
 @NgModule({
   declarations: [
@@ -19,10 +23,13 @@ import { MessagesModule } from './messages/messages.module';
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatSidenavModule,
     UserModule,
     ProductsModule,
     BlogsModule,
-    MessagesModule
+    MessagesModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

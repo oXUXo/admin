@@ -1,1 +1,25 @@
-<p>message-list works!</p>
+<mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile>Name</mat-grid-tile>
+    <mat-grid-tile>Email</mat-grid-tile>
+    <mat-grid-tile>Time</mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
+            
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Time</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let message of messages">
+            <td>{{message.name}}</td>
+            <td>{{message.email}}</td>
+            <td>{{message.createdAt | date}}</td>
+            <td><button mat-icon-button (click)="showDetail(message)"><mat-icon>more_vert</mat-icon></button><button mat-icon-button (click)="delete(message)"><mat-icon>delete</mat-icon></button></td>
+        </tr>
+    </tbody>
+</table>
