@@ -2,3 +2,16 @@ tr:hover {
     background-color: skyblue;
     color: white;
 }
+
+.container {
+    display: grid;
+    // grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 2rem;
+    grid-auto-rows: 2rem;
+}
+
+.message {
+    display: inline-grid;
+    grid-template-columns: repeat(4,1fr);
+}
+

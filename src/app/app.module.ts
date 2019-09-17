@@ -12,11 +12,13 @@ import { BlogsModule } from './blogs/blogs.module';
 import { MessagesModule } from './messages/messages.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

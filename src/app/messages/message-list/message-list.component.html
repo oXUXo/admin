@@ -1,25 +1,15 @@
-<mat-grid-list cols="4" rowHeight="2:1">
-    <mat-grid-tile>Name</mat-grid-tile>
-    <mat-grid-tile>Email</mat-grid-tile>
-    <mat-grid-tile>Time</mat-grid-tile>
-    <mat-grid-tile></mat-grid-tile>
-</mat-grid-list>
-            
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Time</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let message of messages">
-            <td>{{message.name}}</td>
-            <td>{{message.email}}</td>
-            <td>{{message.createdAt | date}}</td>
-            <td><button mat-icon-button (click)="showDetail(message)"><mat-icon>more_vert</mat-icon></button><button mat-icon-button (click)="delete(message)"><mat-icon>delete</mat-icon></button></td>
-        </tr>
-    </tbody>
-</table>
+<div class="container">
+    <div class="message">
+        <span>Name</span>
+        <span>Email</span>
+        <span>Time</span>
+        <span></span>
+    </div>
+    <div class="message" *ngFor="let message of messages">
+        <span>{{message.name}}</span>
+        <span>{{message.email}}</span>
+        <span>{{message.createdAt | date}}</span>
+        <span><button mat-icon-button (click)="showDetail(message)"><mat-icon>more_vert</mat-icon></button><button mat-icon-button (click)="delete(message)"><mat-icon>delete</mat-icon></button></span>
+    </div>
+    
+</div>
